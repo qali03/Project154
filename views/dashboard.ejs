@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h2>Welcome, <%= user.username %> (<%= user.role %>)</h2>
+
+  <% if (records && records.length) { %>
+    <table border="1">
+      <tr>
+        <th>Name</th><th>Username</th><th>Department</th><th>Salary</th><th>SSN</th><th>DOB</th>
+      </tr>
+      <% records.forEach(emp => { %>
+        <tr>
+          <td><%= emp.name %></td>
+          <td><%= emp.username %></td>
+          <td><%= emp.department %></td>
+          <td><%= emp.salary %></td>
+          <td><%= emp.ssn %></td>
+          <td><%= emp.dob %></td>
+        </tr>
+      <% }); %>
+    </table>
+  <% } else { %>
+    <p>No records available.</p>
+  <% } %>
+
+  <br>
+  <a href="/logout">Logout</a>
+</body>
+</html>
