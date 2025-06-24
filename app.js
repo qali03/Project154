@@ -65,10 +65,10 @@ app.get("/logout", (req, res) => {
 
 // HTTPS server
 const sslOptions = {
-  key: fs.readFileSync("certs/server.crt"),
-  cert: fs.readFileSync("certs/server.crt")
+  key: fs.readFileSync(path.join(__dirname, 'certs', 'server.key')),
+  cert: fs.readFileSync(path.join(__dirname, 'certs', 'server.crt'))
 };
 
-https.createServer(sslOptions, app).listen(443, () => {
-  console.log("Secure server running at https://secure-portal.local");
+https.createServer(sslOptions, app).listen(8443, () => {
+  console.log("Secure server running at https://secure-portal.local:8443");
 });
