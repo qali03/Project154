@@ -2,3 +2,5 @@ node_modules/
 certs/
 *.db
 .env
+*.log
+

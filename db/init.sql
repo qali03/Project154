@@ -24,3 +24,4 @@ INSERT INTO users (username, password, role) VALUES (
   '$2b$10$KiGAYnYlQsba7lnKf.6Wye5H7gPTNroTU4qloN9tqiH1MJ7VKglzK',
   'admin'
 );
+
